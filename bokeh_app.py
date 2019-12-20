@@ -32,12 +32,12 @@ filtered = points.apply(filter_points, streams=[hv.streams.RangeXY(source=points
 shaded = datashade(filtered, width=400, height=400)
 hover = filtered.apply(hover_points)
 
-layout = (shaded * hover).opts(
+hv_layout = (shaded * hover).opts(
     hv.opts.Points(tools=['hover'], active_tools=['wheel_zoom'],
                    alpha=0.1, hover_alpha=0.2, size=10, width=600, height=600))
 
 renderer = hv.renderer('bokeh').instance(mode='server')
 doc = curdoc()
-hvplot = renderer.get_plot(plot, doc)
-l = layout(hvplot.state)
+hv_plot = renderer.get_plot(hv_layout, doc)
+l = layout(hv_plot.state)
 doc.add_root(l)
