@@ -1,6 +1,6 @@
 # holoviews with dynamic bokeh overlay
 
-**Problem**: You want to make a scatter plot of a two-dimensional data set but the data set
+**Problem**: You want to make a two-dimensional scatter plot of a data set but the data set
 is too large (> 50k points) to be sensibly visualized with [`bokeh`](https://bokeh.org/).
 At the same time, you would like to retain the ability to interact with individual points to find out more information about them (e.g. via the `hover` tool).
 
