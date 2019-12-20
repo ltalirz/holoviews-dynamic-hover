@@ -7,6 +7,8 @@ At the same time, you would like to retain the ability to interact with individu
 **Solution**: Use [`holoviews`](http://holoviews.org/), start with a full view of the plot rendered with [`datashader`](https://datashader.org/),
 and overlay with a [`bokeh`](https://bokeh.org/) scatter plot only once the user has zoomed in far enough.
 
+![Demo](https://i.ibb.co/mS7z89R/zoom.gif "Bokeh overlay appears upon zoom.")
+
 ## Prerequisites
 With [`conda`](https://docs.conda.io/en/latest/):
 ```
